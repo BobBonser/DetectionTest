@@ -1,0 +1,35 @@
+﻿@inherits LayoutComponentBase
+@inject Wangkanai.Detection.Services.IDetectionService detection
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    </div>
+
+    <div class="content px-4">
+        <p>Using @type</p>
+
+
+        @Body
+    </div>
+</div>
+
+@code {
+    string type;
+
+    protected override void OnInitialized()
+    {
+        if (detection.Device.Type == Wangkanai.Detection.Models.Device.Mobile)
+        {
+            type = "Mobile Devie";
+        }
+        else
+        {
+            type = "Desktop Device";
+        }
+    }
+}
