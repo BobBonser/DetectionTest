@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Wangkanai.Detection" Version="3.0.0-alpha12" />
+    <PackageReference Include="Wangkanai.Detection" Version="3.0.0-alpha13" />
   </ItemGroup>
 
 </Project>
